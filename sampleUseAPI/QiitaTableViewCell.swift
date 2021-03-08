@@ -11,6 +11,7 @@ class QiitaTableViewCell: UITableViewCell {
     var qiita: Qiita? {
         didSet {
             bodyTextLabel.text = qiita?.title
+            createdTimeLabel.text = qiita?.createdAt
             let url = URL(string: qiita?.user.profileImageUrl ?? "")
             do {
                 let data = try Data(contentsOf: url!)
@@ -40,11 +41,17 @@ class QiitaTableViewCell: UITableViewCell {
         return label
     }()
     
+    let createdTimeLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         addSubview(userImageView)
         addSubview(bodyTextLabel)
+        addSubview(createdTimeLabel)
         [
             userImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
             userImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -52,7 +59,8 @@ class QiitaTableViewCell: UITableViewCell {
             userImageView.heightAnchor.constraint(equalToConstant: 50),
             
             bodyTextLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 8),
-            bodyTextLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            bodyTextLabel.topAnchor.constraint(equalTo: userImageView.topAnchor),
+//            bodyTextLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             bodyTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
         ].forEach{ $0.isActive = true }
     }
