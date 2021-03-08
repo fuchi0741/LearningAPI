@@ -12,26 +12,24 @@ class ViewController: UIViewController {
     
     private let cellId = "cellId"
     
-    //ここでUITableViewを再度しているのが何故か疑問
-    let tableView: UITableView = {
-        let tv = UITableView()
-        return tv
-    }()
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.delegate = self
+            tableView.dataSource = self
+            tableView.register(QiitaTableViewCell.self, forCellReuseIdentifier: cellId)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
-        tableView.frame.size = view.frame.size
-        
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(QiitaTableViewCell.self, forCellReuseIdentifier: cellId)
-        
-        navigationItem.title = "Qiitaの記事"
-        
+        headerTitle()
         QiitaManager.getQiitaApi {
             self.tableView.reloadData()
         }
+    }
+    
+    private func headerTitle() {
+        navigationItem.title = "Qiitaの記事"
     }
 }
 
