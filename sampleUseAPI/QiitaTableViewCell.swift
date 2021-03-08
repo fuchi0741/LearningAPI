@@ -27,6 +27,7 @@ class QiitaTableViewCell: UITableViewCell {
         iv.contentMode = .scaleAspectFill
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.clipsToBounds = true
+        iv.layer.cornerRadius = 50 / 2
         return iv
     }()
     
@@ -54,8 +55,6 @@ class QiitaTableViewCell: UITableViewCell {
             bodyTextLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             bodyTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
         ].forEach{ $0.isActive = true }
-        
-        userImageView.layer.cornerRadius = 50 / 2
     }
     
     required init?(coder: NSCoder) {
