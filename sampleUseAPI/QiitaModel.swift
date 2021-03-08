@@ -30,7 +30,7 @@ struct User: Codable {
 }
 
 struct QiitaManager {
-    static var qiitas = [Qiita]()
+    private(set) static var qiitas = [Qiita]()
 
     static func getQiitaApi(completionHander: @escaping () -> Void) {
         guard let url = URL(string: "https://qiita.com/api/v2/items?page=1&per_page=20") else { return }
