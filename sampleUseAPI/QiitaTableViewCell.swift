@@ -60,7 +60,6 @@ class QiitaTableViewCell: UITableViewCell {
             
             bodyTextLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 8),
             bodyTextLabel.topAnchor.constraint(equalTo: userImageView.topAnchor),
-//            bodyTextLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
             bodyTextLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)
         ].forEach{ $0.isActive = true }
     }
