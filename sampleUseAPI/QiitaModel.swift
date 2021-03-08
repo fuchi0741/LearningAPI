@@ -34,9 +34,6 @@ struct QiitaManager {
 
     static func getQiitaApi(completionHander: @escaping () -> Void) {
         guard let url = URL(string: "https://qiita.com/api/v2/items?page=1&per_page=20") else { return }
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
         let task = URLSession.shared.dataTask(with: url) { (data, response, err) in
             if let err = err {
                 print("情報の取得に失敗しました。", err)
