@@ -16,14 +16,14 @@ class QiitaTableViewCell: UITableViewCell {
                 let data = try Data(contentsOf: url!)
                 let image = UIImage(data: data)
                 userImageView.image = image
-            }catch let err {
+            } catch let err {
                 print("Error : \(err.localizedDescription)")
             }
         }
     }
     
     let userImageView: UIImageView = {
-       let iv = UIImageView()
+        let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.clipsToBounds = true
@@ -51,7 +51,7 @@ class QiitaTableViewCell: UITableViewCell {
             
             bodyTextLabel.leadingAnchor.constraint(equalTo: userImageView.trailingAnchor, constant: 20),
             bodyTextLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
-            ].forEach{ $0.isActive = true }
+        ].forEach{ $0.isActive = true }
         
         userImageView.layer.cornerRadius = 50 / 2
     }

@@ -3,4 +3,86 @@
    uuid = "579185EB-01BE-4BF5-B080-537C2030EA33"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "36D35310-273F-4D41-AC78-2C05CB63DA6C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleUseAPI/QiitaTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "qiita"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7155ACDD-12CD-481D-BB36-F74A8A548BC3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleUseAPI/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0E1EB03-4F93-4777-AF98-BF6E0142F75D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sampleUseAPI/QiitaTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "userImageView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B0E1EB03-4F93-4777-AF98-BF6E0142F75D - 3cd52ba08ae092fd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIImageView in variable initialization expression of sampleUseAPI.QiitaTableViewCell.userImageView : __C.UIImageView"
+                  moduleName = "sampleUseAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fuchikazuma/Desktop/sampleUseAPI/sampleUseAPI/QiitaTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "B0E1EB03-4F93-4777-AF98-BF6E0142F75D - 5bacd7a11563dfff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "sampleUseAPI.QiitaTableViewCell.userImageView.getter : __C.UIImageView"
+                  moduleName = "sampleUseAPI"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fuchikazuma/Desktop/sampleUseAPI/sampleUseAPI/QiitaTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

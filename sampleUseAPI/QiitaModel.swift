@@ -44,13 +44,11 @@ struct QiitaManager {
             
             if let data = data {
                 do {
-    //                    let json = try JSONSerialization.jsonObject(with: data, options: .fragmentsAllowed)
-                    let qiita = try JSONDecoder().decode([Qiita].self, from: data)
-                    qiitas = qiita
+                    qiitas = try JSONDecoder().decode([Qiita].self, from: data)
                     DispatchQueue.main.async {
                         completionHander()
                     }
-                    print("JSONが取得できた", qiita)
+                    print("JSONが取得できた", qiitas)
                 } catch(let err) {
                     print("情報の取得に失敗しました", err)
                 }
